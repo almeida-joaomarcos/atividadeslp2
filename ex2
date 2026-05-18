@@ -1,0 +1,27 @@
+2) Construa um algoritmo utilizando a representação de fluxograma que calcule e informe a
+quantidade de gasolina que será preciso colocar no carro e quanto irá custar para o seu dono ir
+até a sua fazenda. O usuário deverá informar a distância que será percorrida e o preço do litro
+da gasolina. Para o cálculo, sabe-se que o carro faz em média 12 km/litro. 
+
+
+import java.util.Scanner;
+
+public class GasolinaFazenda {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite a distância até a fazenda (km): ");
+        double distancia = scanner.nextDouble();
+
+        System.out.print("Digite o preço do litro da gasolina (R$): ");
+        double precoPorLitro = scanner.nextDouble();
+
+        double litros = distancia / 12.0;
+        double custo = litros * precoPorLitro;
+
+        System.out.printf("Quantidade de gasolina necessária: %.2f litros%n", litros);
+        System.out.printf("Custo total: R$ %.2f%n", custo);
+
+        scanner.close();
+    }
+}
