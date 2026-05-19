@@ -1,1 +1,60 @@
+7) Faça um algoritmo utilizando a representação de fluxograma que leia o peso e a altura do
+usuário e informa se o mesmo está obeso. Lembre que para saber se uma pessoa está obesa
+deve-se utilizar a fórmula: imc = peso/altura2. Caso o resultado do imc seja maior que 30 o
+usuário está obeso. 
+
+import java.util.Scanner;
+
+public class CalculoIMC {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite seu peso (kg): ");
+        double peso = scanner.nextDouble();
+
+        System.out.print("Digite sua altura (m): ");
+        double altura = scanner.nextDouble();
+
+        double imc = peso / (altura * altura);
+
+        if (imc > 30) {
+            System.out.println("Usuário obeso. IMC: " + imc);
+        } else {
+            System.out.println("Usuário não obeso. IMC: " + imc);
+        }
+
+        scanner.close();
+    }
+}
+
+
+
+8) Faça um algoritmo utilizando a representação de fluxograma que calcule a área de uma
+circunferência e apresente a medida da área calculada. Sabe-se que para realizar o cálculo da
+área de uma circunferência é necessário utilizar a seguinte a seguinte fórmula: A = Pi*r² . O
+valor do Raio será informado pelo usuário. 
+
+import java.util.Scanner;
+
+public class AreaCircunferencia {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o raio da circunferência: ");
+        double raio = scanner.nextDouble();
+
+        double area = Math.PI * (raio * raio);
+
+        System.out.printf("Área da circunferência: %.2f%n", area);
+
+        scanner.close();
+    }
+}
+
+
+
+
+
+
+
 
